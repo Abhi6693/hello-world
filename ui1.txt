@@ -1,0 +1,249 @@
+git 
+integrate it the visual studio
+git clone url
+local machine --- architect--- server(remote is the keyword for the code on the server
+Local machine--stage area-- locla repository--- remote
+
+we track each change using git
+commit- a snapshot of changes- can modify or discard. also travck its history.
+
+git clone "url"
+
+git status - untracked files
+
+git add file=
+
+git commit -m "message"
+
+git checkout -b name of branch / checks out to the feature branch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git checkout master
+
+git push set-upstream origin name of the remote branch.
+
+git pull // to get the latest.
+
+2. create a github account
+3. creat a repository
+4. clone it and make changes to your dcoument file and 
+
+git push URL
+
+
+1.Install IDE
+2. Create a github account
+3. Integrate
+3 Access your terminal (Ctrl +)
+4 . Create repositories
+
+
+CSS- main elements
+ box model-
+
+Class, id 
+1.Position property
+2.Flexbox  can acheive flexibilty in the webpage
+3. Media queries
+
+Bootstrap and material design - out of the box libraries and designing tools
+
+Flexbox- 
+
+class- generic , we use . notation
+id - unique  , # icon 
+
+keywords : container is the outer wrap 
+and inside elements are items.
+
+flex-direction for alignment 
+flex-wrap- depending on the real estate , it compresses when we compress the screen space.
+
+All these come under responsive web design .
+justify for horizonal
+align for vertical 
+justify-content :space-around.
+align-content
+
+
+Media queries-
+
+to adjust the app interface based on the device dimensions.
+
+input the min and max dimensions of the device within which the styles are designed
+
+Syntax : @media
+
+to position property:
+
+used to align the position of the elements in the webpage.
+Absolute,relative,fixed.
+
+1.create a html document with tags
+2.implement class and id styles
+3. Use flexbox.
+
+add the information about the css file.
+
+
+
+class- give to all same items
+id - for only particular 
+
+
+
+JAVASCRIPT
+
+1.variables
+2.functions.
+
+React JS 
+Angular// built on top of javascript.
+
+objects-
+syntax 
+
+var person = {
+    //key : value }
+
+valu can be a string , number, function or another object.
+
+window object - it is a global object.
+1.hoisting
+scopes
+2.'this' keywords
+3.Callbacks,promises
+4.ES6/ES7 features
+5.Prototypes
+6.Closures.
+
+
+ES6/ES7- ECMA script- to add changes to a current Javascript
+
+
+Scope : 
+
+1. block level scope
+
+
+2. functional scopes- whatever present in the funciton is only accssible
+within the funciton
+block level scope - anything within open and closed braces 
+global scope - window objects.
+by default value if no valu is assigned to avariable is 'undefined'
+
+if no keyword is assigned for a variable , the default assign is a global scope variable.
+
+1. variable declaration, object syntax,how functions are a
+2. funcitonal scope and global scope.
+
+
+when the browser is 
+
+there is no separate execuntion file
+
+1.compilation phase-looks for variable and functional declarations
+2.execution phase
+
+1. compilation 
+first the variables and function key words are checked
+and later the scope is checlked
+
+2. execution phase- assigning a value and calling a function
+
+when there is no keyword , it checks within the scope if it is present or not and 
+goes above one line and checks again for the scope of thr keywird, if n
+nothing is found it creates a new word
+
+use strict- avoids to use bad coding practice.
+
+
+
+
+ 
+this is called hoisting
+all variable and funciton declaration move top 
+and function calling int ht ebottom
+
+1.funciton declaration
+2.variable declaration
+
+need to focus on function declaration and function expression.
+
+
+
+var a = b();
+var c = d():
+a; 
+c;
+
+function b(){
+    return c ;
+}
+
+var d = funtion(){
+          return b();
+}
+
+
+foo();
+var foo = 2;
+function foo(){
+    console.log("bar");
+}
+function foo() {
+   console.log("foo");
+} 
+
+
+
+
+change block level scope.
+
+closure-
+the function being written within a function is called a closure 
+
+
+
+
+
+
+
+
+
+
+
+
