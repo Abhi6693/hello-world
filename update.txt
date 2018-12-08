@@ -1,0 +1,85 @@
+'this' keyword :
+It refers to the obect that it belongs to 
+
+Example:
+
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+
+In the above example ,
+this refers to the object 'person, , because the fullname () method is owned by the person object.
+
+-In a object method , this refers to the main object.
+- When 'this' is used alone, it refers to the global object or window object.
+-Some other predefined methods which use 'this' keyword are 
+1.bind():
+when using this function, the object which is declared within the bind function , is assinged to 'this' keyword.
+
+Example :
+
+var person1 = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+var person2 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+var x = person1.fullName.call(person2); 
+document.getElementById("demo").innerHTML = x;
+
+here, when person1.fullname.call(person2) is executed, the person 2 object is assigned to 'this' keyword and the function person1.fullname.call()
+is called.
+
+The main difference btw call() and apply()is 
+
+in call():
+
+you can pass arguments when calling the function itself 
+
+in apply():
+you can pass arguments as an array .
+
+
+- another way to access an object using 'this' is by declaring 'new' keyword before a function
+
+Example :
+
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+// Create two Person objects
+var myFather = new Person("John", "Doe", 50, "blue");
+
+In the above example, when we introduce the 'new' keyword before the person () on the RHS, the object myFather is assigned to 'this'
+keyword and whatever the arguments that are passed , will effect the main object 
+
+
+
+
+Callback function:
+
+The method of passing function definitions as an argument to another functions.
+
+
+
+When a code uses more callback functions, it increases the complexity and becomes an asynchronous task, which is apparently known 
+as callback hell.
+
+To avoid this complexity, we use the concept of promise.
+
