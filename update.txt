@@ -76,10 +76,66 @@ Callback function:
 
 The method of passing function definitions as an argument to another functions.
 
-
+we can have multiple callbakc functions with conditional statements.
 
 When a code uses more callback functions, it increases the complexity and becomes an asynchronous task, which is apparently known 
 as callback hell.
 
 To avoid this complexity, we use the concept of promise.
+
+Example :
+
+var ismomhappy = true;
+var willgetnewphone = new Promise(
+    function(resolve,reject){
+    if(ismomhappy){
+        var phone = {
+            brand : "samsung"
+            color : "black"
+        };
+        reslove(phone);
+        }
+        else{
+            var reason = new Error('mom is not happy')
+            reject(reason);
+        }
+    }
+});
+
+var askmom = function(){
+    willgetnewphone
+    .then(function(fulfilled){
+        console.log(fulfilled)
+
+    })
+    .catch(function(error){
+        console.log(error.message)
+    });
+
+};
+
+askmom();
+
+in the above example,
+a promise keyword with built in resolve and reject callback functions are defined.
+
+Case 1: true
+when we pass a value to the variable ismomhappy as 'true', the if condition in the function is checked , 
+and as the condition is true , the resolve function is 
+callbacked returning the phone object as a success.
+when this happens, the .then function ,which is another call back function, is called to process the data as in the resolve function.
+here , in the .then(), the fulfilled argument is same as the phone object in the resolve(),
+so it displays the phone object.
+
+Case 2:false
+when the value is false,
+it skips, the if condition , and else is executed ,where the reject function is called, 
+when this happens, .catch()//callback is called and the error which is the reason is called and the contents of the obejct i.e; the message is displayed.
+
+
+From this example, we can see the significance of promise over callback which is , using promise the task of coding becomes synchronous by not declaring
+multiple callback functions and maintaining a good code quality.
+
+
+
 
